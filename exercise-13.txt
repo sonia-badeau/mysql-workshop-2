@@ -1,0 +1,32 @@
+Exercise 13
+
+- How many Address Book Entries have phones starting with area code 3XX?
+select count(*) from Entry where contentLineOne like ='(3__)%'; 
+mysql> select count(*) from Entry where contentLineOne like '(3%'; 
++----------+
+| count(*) |
++----------+
+|       39 |
++----------+
+1 row in set (0.01 sec)
+
+- How many Address Book Entries have home phones not containing the digit 5?
+
+select count(*) from Entry where type='home' AND subtype='phone' AND contentLineOne NOT LIKE '%5%';
+mysql> select count(*) from Entry where type='home' AND subtype='phone' AND contentLineOne NOT LIKE '%5%';
++----------+
+| count(*) |
++----------+
+|       76 |
++----------+
+1 row in set (0.00 sec)
+
+- How many Address Book Entries are work phones starting with a country code?
+select count(*) from Entry where type='work' AND subtype='phone' AND contentLine0ne like '_-%';
+mysql> select count(*) from Entry where type='work' AND subtype='phone' AND contentLineOne like '_-%';                                                               
++----------+
+| count(*) |
++----------+
+|       60 |
++----------+
+1 row in set (0.00 sec)
