@@ -1,2 +1,8 @@
 Exercise 5
 - Delete all data from decodemtl_addressbook.Entry without using a DELETE statement
+
+mysql> truncate decodemtl_addressbook.Entry;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select * from decodemtl_addressbook.Entry;
+Empty set (0.00 sec)
