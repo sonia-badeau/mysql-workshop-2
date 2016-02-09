@@ -1,0 +1,31 @@
+Exercise 10
+
+- How many Address Book Entries are listed as born before February 12th of 1982?
+mysql> select count(*) from decodemtl_addressbook.Entry where birthday='1982-02-12';
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+- How many Address Book Entries are listed as born on or after January 1st of 1965?
+
+select count(*) from decodemtl_addressbook.Entry where birthday>='1965-01-01';
+mysql> select count(*) from decodemtl_addressbook.Entry where birthday>='1965-01-01';
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+- Which Address Book Entry is listed as being the oldest of age?
+select max(birthday) from decodemtl_addressbook.Entry;
+mysql> select max(birthday) from decodemtl_addressbook.Entry;
++---------------+
+| max(birthday) |
++---------------+
+| NULL          |
++---------------+
+1 row in set (0.01 sec)

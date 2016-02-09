@@ -1,0 +1,40 @@
+Exercise 9
+
+- How many Accounts exist?
+mysql> select count(*) from decodemtl_addressbook.Account;
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+- How many Address Books exist?
+mysql> select count(*) from decodemtl_addressbook.AddressBook;
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+- How many Address Book Entries exist?
+mysql> select count(*) from decodemtl_addressbook.Entry;
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.00 sec)
+
+//One shot!
+
+mysql> select count(*) from decodemtl_addressbook.Account, decodemtl_addressbook.AddressBook, decodemtl_addressbook.Entry;
++----------+
+| count(*) |
++----------+
+|        0 |
++----------+
+1 row in set (0.01 sec)
+
+
