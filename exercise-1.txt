@@ -3,4 +3,20 @@ Exercise 1
 - Import Database Schema from the following source file into decodemtl_addressbook:
 - data/import-table-structure.sql
 
-mysql> data/import-table-structure.sql
+mysql> source data/import-table-structure.sql
+Query OK, 3 rows affected (0.02 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Database changed
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
