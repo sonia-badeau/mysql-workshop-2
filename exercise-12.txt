@@ -1,0 +1,36 @@
+Exercise 12
+
+- Which Account owns the most Address Books?
+SELECT AccountId, count(*)  
+FROM AddressBook  
+GROUP BY accountId  
+having count(*)=( select max(ct) 
+from (select count(*) as ct from AddressBook group by accountId) countTable );
+
+mysql> SELECT AccountId, count(*)  FROM AddressBook  GROUP BY accountId  having count(*)=( select max(ct) from (select count(*) as ct from AddressBook group by accountId) countTable );
++-----------+----------+
+| AccountId | count(*) |
++-----------+----------+
+|         5 |       19 |
+|        14 |       19 |
++-----------+----------+
+2 rows in set (0.00 sec)
+
+- Which Address Book contains the most Entries?
+SELECT addressBookId, count(*)
+FROM Entry
+GROUP BY addressBookId
+having count(*)=(select max(ct)
+from (select count(*) as ct from Entry group by addressBookId) countTable );
+
+mysql> SELECT addressBookId, count(*)
+    -> FROM Entry
+    -> GROUP BY addressBookId
+    -> having count(*)=(select max(ct)
+    -> from (select count(*) as ct from Entry group by addressBookId) countTable );
++---------------+----------+
+| addressBookId | count(*) |
++---------------+----------+
+|            37 |       52 |
++---------------+----------+
+1 row in set (0.01 sec)
