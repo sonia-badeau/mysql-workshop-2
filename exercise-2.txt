@@ -1,0 +1,48 @@
+Exercise 2
+
+- Insert one row into decodemtl_addressbook.Account
+insert into decodemtl_addressbook.Account values('null', 'sonia@sonia.com', 'password', '2016-02-09', '2016-02-09');
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| email      | varchar(255) | NO   |     | NULL    |                |
+| password   | varchar(40)  | NO   |     | NULL    |                |
+| createdOn  | datetime     | NO   |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+- Insert one row into decodemtl_addressbook.AddressBook
+insert into decodemtl_addressbook.AddressBook values('null', 'Sonia', 'null', 'null', 'null');
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
+| accountId  | int(11)      | NO   |     | NULL    |                |
+| name       | varchar(255) | NO   |     | NULL    |                |
+| createdOn  | datetime     | NO   |     | NULL    |                |
+| modifiedOn | datetime     | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+
+- Insert three rows into decodemtl_addressbook.Entry
+insert into decodemtl_addressbook.Entry values('null', 'Sonia', 'B', 'null', 'home', 'address', 'null', 'null', 'null', 'null', 'null', 1);
+insert into decodemtl_addressbook.Entry values('null', 'John', 'M', 'null', 'work', 'email', 'null', 'null', 'null', 'null', 'null', 1);    
+insert into decodemtl_addressbook.Entry values('null', 'Sarah', 'C', 'null', 'other', 'phone', 'null', 'null', 'null', 'null', 'null', 1); 
+
++------------------+---------------------------------+------+-----+---------+----------------+
+| Field            | Type                            | Null | Key | Default | Extra          |
++------------------+---------------------------------+------+-----+---------+----------------+
+| Entry.id         | int(11)                         | NO   | PRI | NULL    | auto_increment |
+| firstName        | varchar(255)                    | YES  |     | NULL    |                |
+| lastName         | varchar(255)                    | YES  |     | NULL    |                |
+| birthday         | datetime                        | YES  |     | NULL    |                |
+| type             | enum('home','work','other')     | YES  |     | NULL    |                |
+| subtype          | enum('phone','address','email') | YES  |     | NULL    |                |
+| contentLineOne   | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineTwo   | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineThree | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineFour  | varchar(255)                    | YES  |     | NULL    |                |
+| contentLineFive  | varchar(255)                    | YES  |     | NULL    |                |
+| AddressBook.id   | int(11)                         | YES  |     | NULL    |                |
++------------------+---------------------------------+------+-----+---------+----------------+
+
