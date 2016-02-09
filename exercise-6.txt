@@ -1,0 +1,6 @@
+Exercise 6
+- Delete decodemtl_addressbook.Account and all associated date
+
+mysql> drop table decodemtl_addressbook.Account;
+Query OK, 0 rows affected (0.02 sec)
+
