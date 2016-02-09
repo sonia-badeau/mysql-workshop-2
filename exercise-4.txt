@@ -1,0 +1,32 @@
+Exercise 4
+- Modify the decodemtl_addressbook.Account row
+
+update decodemtl_addressbook.Account set email='soniab@gmail.com' where id=1;
+mysql> select * from decodemtl_addressbook.Account;
++----+------------------+----------+---------------------+---------------------+
+| id | email            | password | createdOn           | modifiedOn          |
++----+------------------+----------+---------------------+---------------------+
+|  1 | soniab@gmail.com | password | 2016-02-09 00:00:00 | 2016-02-09 00:00:00 |
++----+------------------+----------+---------------------+---------------------+
+
+- Modify the decodemtl_addressbook.AddressBook row
+
+update decodemtl_addressbook.AddressBook set name='Soso' where id=1;
+mysql> select * from decodemtl_addressbook.AddressBook;
++----+-----------+------+---------------------+---------------------+
+| id | accountId | name | createdOn           | modifiedOn          |
++----+-----------+------+---------------------+---------------------+
+|  1 |         0 | Soso | 0000-00-00 00:00:00 | 0000-00-00 00:00:00 |
++----+-----------+------+---------------------+---------------------+
+
+- Modify the three decodemtl_addressbook.Entry rows using one query only (ne pas utiliser where, ainsi toutes les lignes seront mises à jour)
+
+update decodemtl_addressbook.Entry set firstName='John'; 
+mysql> select * from decodemtl_addressbook.Entry;
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |             0 | John      | null     | 0000-00-00 00:00:00 |      |         | null           | null           | null             | null            | 1               |
+|  2 |             0 | John      | null     | 0000-00-00 00:00:00 |      |         | null           | null           | null             | null            | 1               |
+|  3 |             0 | John      | null     | 0000-00-00 00:00:00 |      |         | null           | null           | null             | null            | 1               |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
