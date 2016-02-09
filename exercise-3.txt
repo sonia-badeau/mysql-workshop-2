@@ -1,0 +1,28 @@
+Exercise 3
+- Retrieve data from the previously inserted decodemtl_addressbook.Account row
+mysql> select * from decodemtl_addressbook.Account;
++----+-----------------+----------+---------------------+---------------------+
+| id | email           | password | createdOn           | modifiedOn          |
++----+-----------------+----------+---------------------+---------------------+
+|  1 | sonia@sonia.com | password | 2016-02-09 00:00:00 | 2016-02-09 00:00:00 |
++----+-----------------+----------+---------------------+---------------------+
+
+- Retrieve data from the previously inserted decodemtl_addressbook.AddressBook row
+mysql> select * from decodemtl_addressbook.AddressBook;
++----+-----------+------+---------------------+---------------------+
+| id | accountId | name | createdOn           | modifiedOn          |
++----+-----------+------+---------------------+---------------------+
+|  1 |         0 | null | 0000-00-00 00:00:00 | 0000-00-00 00:00:00 |
++----+-----------+------+---------------------+---------------------+
+
+- Retrieve data from the previously inserted decodemtl_addressbook.Entry rows
+mysql> select * from decodemtl_addressbook.Entry;
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |             0 | B         | null     | 0000-00-00 00:00:00 |      |         | null           | null           | null             | null            | 1               |
+|  2 |             0 | M         | null     | 0000-00-00 00:00:00 |      |         | null           | null           | null             | null            | 1               |
+|  3 |             0 | C         | null     | 0000-00-00 00:00:00 |      |         | null           | null           | null             | null            | 1               |
++----+---------------+-----------+----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+
+
